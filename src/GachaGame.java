@@ -11,25 +11,23 @@ public class GachaGame {
         GachaMachine gachaMachine = new GachaMachine();
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Welcome to the Gacha Game!");
+        System.out.println("Welcome to Sophia's restaurant, where everything is for free!" +
+                "\nHere you can enjoy some fufilling snacks, meals, and even refreshing drinks!" +
+                "\nYou might find a nice surprise if you keep pulling...there's a 0.06% chance!");
 
         boolean exit = false;
         while (!exit) {
-            System.out.println("\nPress enter to spin the gacha machine...");
+            System.out.println("\nPress enter to pull a meal/refreshment...");
             scanner.nextLine();
 
             GachaItem result = gachaMachine.spin();
-            System.out.println("You got: " + result.getName());
+            System.out.println("You got: " + result.getName() + "!");
 
             System.out.println("Do you want to use this item? (y/n)");
             String choice = scanner.nextLine();
             if (choice.equalsIgnoreCase("y")) {
-                if (result instanceof Usable) {
                     Usable usableItem = (Usable) result;
                     usableItem.use();
-                } else {
-                    System.out.println("This item cannot be used.");
-                }
             }
 
             System.out.println("Do you want to collect this item? (y/n)");
@@ -45,7 +43,7 @@ public class GachaGame {
                 gachaMachine.showInventory();
             }
 
-            System.out.println("Do you want to continue playing? (y/n)");
+            System.out.println("Do you want to continue eating? (y/n)");
             choice = scanner.nextLine();
             if (!choice.equalsIgnoreCase("y")) {
                 exit = true;

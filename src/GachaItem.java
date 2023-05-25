@@ -1,5 +1,5 @@
 /**
- *
+ * GachaItem constructor that holds gacha item
  */
 class GachaItem
 {
@@ -15,42 +15,34 @@ class GachaItem
 }
 
 // Subclass of GachaItem representing a weapon item
-class WeaponItem extends GachaItem implements Usable {
-    private int damage;
+class FoodItem extends GachaItem implements Usable {
+    private int hunger;
 
-    public WeaponItem(String name, int damage) {
+    public FoodItem(String name, int hunger) {
         super(name);
-        this.damage = damage;
-    }
-
-    public int getDamage() {
-        return damage;
+        this.hunger = hunger;
     }
 
     @Override
     public void use() {
         System.out.println("Using " + getName());
-        System.out.println("Causing " + damage + " damage");
+        System.out.println("Satisfies " + hunger + " hunger");
     }
 }
 
 
 // Subclass of GachaItem representing an armor item
-class ArmorItem extends GachaItem implements Usable {
-    private int defense;
+class BevItem extends GachaItem implements Usable {
+    private int bev;
 
-    public ArmorItem(String name, int defense) {
+    public BevItem(String name, int bev) {
         super(name);
-        this.defense = defense;
-    }
-
-    public int getDefense() {
-        return defense;
+        this.bev = bev;
     }
 
     @Override
     public void use() {
         System.out.println("Using " + getName());
-        System.out.println("Providing " + defense + " defense");
+        System.out.println("Quenching " + bev + " thirst");
     }
 }
