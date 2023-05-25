@@ -23,7 +23,7 @@ class GachaMachine {
         items[12] = new FoodItem("Eggs", 3);
         items[13] = new FoodItem("Bread", 3);
         items[14] = new FoodItem("Steak", 20);
-        items[15] = new FoodItem("Butter?", 100);
+        items[15] = new FoodItem("**SPECIAL:** Butter?", 100);
         items[16] = new BevItem("Water", 10);
         items[17] = new BevItem("Soda", 5);
         items[18] = new BevItem("Fruit Juice", 7);
@@ -38,7 +38,7 @@ class GachaMachine {
         items[27] = new BevItem("Coconut Water", 7);
         items[28] = new BevItem("Gatorade", 5);
         items[29] = new BevItem("Smoothie", 8);
-        items[30] = new BevItem("Melted Butter?", 100);
+        items[30] = new BevItem("**SPECIAL:** Melted Butter?", 100);
 
         inventory = new ArrayList<>();  // Initialize the inventory
     }
