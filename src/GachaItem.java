@@ -25,7 +25,7 @@ class FoodItem extends GachaItem implements Usable {
 
     @Override
     public void use() {
-        System.out.println("Using " + getName());
+        System.out.println("Checking " + getName());
         System.out.println("Satisfies " + hunger + " hunger");
     }
 }
@@ -42,7 +42,7 @@ class BevItem extends GachaItem implements Usable {
 
     @Override
     public void use() {
-        System.out.println("Using " + getName());
+        System.out.println("Checking " + getName());
         System.out.println("Quenching " + bev + " thirst");
     }
 }

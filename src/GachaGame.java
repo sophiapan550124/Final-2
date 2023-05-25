@@ -23,7 +23,7 @@ public class GachaGame {
             GachaItem result = gachaMachine.spin();
             System.out.println("You got: " + result.getName() + "!");
 
-            System.out.println("Do you want to use this item? (y/n)");
+            System.out.println("Do you want to check this item? (y/n)");
             String choice = scanner.nextLine();
             if (choice.equalsIgnoreCase("y")) {
                     Usable usableItem = (Usable) result;
